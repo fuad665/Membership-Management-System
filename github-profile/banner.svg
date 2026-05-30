@@ -1,143 +1,167 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="100%" height="280">
   <defs>
-    <!-- Background Linear Gradient -->
+    <!-- Calm Soft Slate & Indigo-Blue Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#05050a" />
-      <stop offset="50%" stop-color="#0a0b10" />
-      <stop offset="100%" stop-color="#030305" />
+      <stop offset="0%" stop-color="#080c14" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#090d16" />
     </linearGradient>
 
-    <!-- Neon Accents Gradients -->
-    <linearGradient id="bluePurple" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#3b82f6" />
-      <stop offset="100%" stop-color="#a855f7" />
+    <!-- Soothing Blue to Mint Gradient -->
+    <linearGradient id="soothingGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#34d399" />
     </linearGradient>
-    <radialGradient id="glow" cx="80%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.15" />
-      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    
+    <radialGradient id="softGlow" cx="80%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0" />
     </radialGradient>
-    <radialGradient id="blueGlow" cx="20%" cy="80%" r="60%">
-      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#2563eb" stop-opacity="0" />
+    
+    <radialGradient id="mintGlow" cx="20%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Grid Pattern -->
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1" />
+    <!-- Fine Tech Grid -->
+    <pattern id="fineGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#ffffff" stroke-opacity="0.02" stroke-width="0.8" />
     </pattern>
+
+    <!-- Typing Mask Animation for Name "Fuad Hiyabo" (approx 280px wide) -->
+    <clipPath id="typingNameClip">
+      <rect x="58" y="80" height="60" width="0">
+        <animate 
+          attributeName="width" 
+          from="0" 
+          to="280" 
+          dur="2.5s" 
+          begin="0.5s" 
+          fill="freeze" 
+          keyTimes="0;1" 
+          keySplines="0.25 0.1 0.25 1" 
+          calcMode="spline" 
+        />
+      </rect>
+    </clipPath>
   </defs>
 
   <style>
-    /* Typography & Animations */
     .title-name {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       font-weight: 800;
-      font-size: 42px;
+      font-size: 40px;
       fill: #ffffff;
-      letter-spacing: -1.5px;
+      letter-spacing: -1px;
     }
     
     .role-label {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 500;
-      fill: #94a3b8;
-      letter-spacing: 1px;
+      fill: #64748b;
+      letter-spacing: 0.5px;
     }
 
-    .cursor {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-      fill: #3b82f6;
-      animation: blink 0.8s infinite;
-    }
-
-    /* Role Text Fade Animations */
+    /* Role Cycling Text Animation */
     .role-text {
-      font-family: 'Consolas', 'Fira Code', Monaco, monospace;
-      font-size: 20px;
-      font-weight: 700;
+      font-family: 'Consolas', 'Fira Code', monospace;
+      font-size: 18px;
+      font-weight: 600;
       opacity: 0;
     }
 
-    .role1 { animation: cycleText1 16s infinite; fill: #3b82f6; }
-    .role2 { animation: cycleText2 16s infinite; fill: #a855f7; }
-    .role3 { animation: cycleText3 16s infinite; fill: #ec4899; }
-    .role4 { animation: cycleText4 16s infinite; fill: #10b981; }
+    .role1 { animation: cycle1 16s infinite; fill: #60a5fa; }
+    .role2 { animation: cycle2 16s infinite; fill: #34d399; }
+    .role3 { animation: cycle3 16s infinite; fill: #a78bfa; }
+    .role4 { animation: cycle4 16s infinite; fill: #94a3b8; }
 
-    @keyframes blink {
-      0%, 100% { opacity: 0; }
-      50% { opacity: 1; }
-    }
-
-    @keyframes cycleText1 {
+    @keyframes cycle1 {
       0%, 22% { opacity: 1; transform: translate(195px, 175px); }
       23%, 100% { opacity: 0; transform: translate(195px, 185px); }
     }
-    @keyframes cycleText2 {
+    @keyframes cycle2 {
       0%, 23% { opacity: 0; transform: translate(195px, 165px); }
       25%, 47% { opacity: 1; transform: translate(195px, 175px); }
       48%, 100% { opacity: 0; transform: translate(195px, 185px); }
     }
-    @keyframes cycleText3 {
+    @keyframes cycle3 {
       0%, 48% { opacity: 0; transform: translate(195px, 165px); }
       50%, 72% { opacity: 1; transform: translate(195px, 175px); }
       73%, 100% { opacity: 0; transform: translate(195px, 185px); }
     }
-    @keyframes cycleText4 {
+    @keyframes cycle4 {
       0%, 73% { opacity: 0; transform: translate(195px, 165px); }
       75%, 97% { opacity: 1; transform: translate(195px, 175px); }
       98%, 100% { opacity: 0; transform: translate(195px, 185px); }
     }
 
-    /* Abstract Cyber Graphic float */
-    .cyber-shape {
-      animation: float 6s ease-in-out infinite;
+    .pulse-dot {
+      animation: pulse 3s infinite;
     }
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-10px) rotate(3deg); }
+    @keyframes pulse {
+      0%, 100% { fill-opacity: 0.3; }
+      50% { fill-opacity: 0.8; }
     }
   </style>
 
-  <!-- 1. Background Fill -->
+  <!-- 1. Background -->
   <rect width="800" height="280" fill="url(#bgGrad)" />
 
   <!-- 2. Ambient Glow Overlays -->
-  <rect width="800" height="280" fill="url(#glow)" />
-  <rect width="800" height="280" fill="url(#blueGlow)" />
+  <rect width="800" height="280" fill="url(#softGlow)" />
+  <rect width="800" height="280" fill="url(#mintGlow)" />
 
   <!-- 3. Tech Grid Overlay -->
-  <rect width="800" height="280" fill="url(#grid)" />
+  <rect width="800" height="280" fill="url(#fineGrid)" />
 
-  <!-- 4. Decorative Cyberpunk Elements (Right Side) -->
-  <g class="cyber-shape" transform="translate(560, 40)">
-    <!-- Circuit rings -->
-    <circle cx="90" cy="100" r="80" fill="none" stroke="url(#bluePurple)" stroke-opacity="0.15" stroke-width="2" />
-    <circle cx="90" cy="100" r="50" fill="none" stroke="url(#bluePurple)" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="10 8" />
-    <circle cx="90" cy="100" r="25" fill="none" stroke="url(#bluePurple)" stroke-opacity="0.4" stroke-width="1.5" />
+  <!-- 4. Clean Tech Drawing (Right Side) -->
+  <g transform="translate(560, 40)" stroke-linecap="round">
+    <!-- Concentric circles -->
+    <circle cx="90" cy="100" r="70" fill="none" stroke="#60a5fa" stroke-opacity="0.08" stroke-width="1.5" />
+    <circle cx="90" cy="100" r="45" fill="none" stroke="#34d399" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="6 6" />
     
-    <!-- Central Glowing Core -->
-    <circle cx="90" cy="100" r="8" fill="#3b82f6" filter="drop-shadow(0 0 10px #3b82f6)" />
+    <!-- Central pulsing dot -->
+    <circle cx="90" cy="100" r="5" fill="#34d399" class="pulse-dot" />
     
-    <!-- Crosshairs -->
-    <path d="M 90 10 L 90 40 M 90 160 L 90 190 M 0 100 L 30 100 M 150 100 L 180 100" stroke="#94a3b8" stroke-opacity="0.3" stroke-width="1.5" />
-    
-    <!-- Cyber Hexagon outline -->
-    <polygon points="90,30 150,65 150,135 90,170 30,135 30,65" fill="none" stroke="#a855f7" stroke-opacity="0.2" stroke-width="2" />
+    <!-- Design Lines -->
+    <line x1="90" y1="15" x2="90" y2="35" stroke="#64748b" stroke-opacity="0.2" stroke-width="1" />
+    <line x1="90" y1="165" x2="90" y2="185" stroke="#64748b" stroke-opacity="0.2" stroke-width="1" />
+    <line x1="5" y1="100" x2="25" y2="100" stroke="#64748b" stroke-opacity="0.2" stroke-width="1" />
+    <line x1="155" y1="100" x2="175" y2="100" stroke="#64748b" stroke-opacity="0.2" stroke-width="1" />
   </g>
 
   <!-- 5. Left Text Header Info -->
   <g transform="translate(60, 0)">
-    <!-- Tech Tag -->
-    <rect y="60" width="105" height="24" rx="12" fill="#3b82f6" fill-opacity="0.1" stroke="#3b82f6" stroke-opacity="0.2" />
-    <text x="12" y="76" font-family="'Consolas', Monaco, monospace" font-size="11" font-weight="bold" fill="#3b82f6">SYSTEM.INIT</text>
+    <!-- System Tag -->
+    <rect y="60" width="105" height="22" rx="11" fill="#60a5fa" fill-opacity="0.05" stroke="#60a5fa" stroke-opacity="0.15" />
+    <text x="12" y="74" font-family="'Consolas', Monaco, monospace" font-size="10" font-weight="bold" fill="#60a5fa">PROFILE.ACTIVE</text>
 
-    <!-- Name Header -->
-    <text y="130" class="title-name">Fuad Hiyabo</text>
+    <!-- Typing Name using Clip Path Mask -->
+    <text x="60" y="130" class="title-name" clip-path="url(#typingNameClip)">Fuad Hiyabo</text>
 
-    <!-- Subtitle (Animated Typing Cycling Roles) -->
+    <!-- Typing Cursor (translates to the right in sync with mask width) -->
+    <rect y="98" width="2" height="36" fill="#60a5fa">
+      <animate 
+        attributeName="x" 
+        from="60" 
+        to="315" 
+        dur="2.5s" 
+        begin="0.5s" 
+        fill="freeze" 
+        keyTimes="0;1" 
+        keySplines="0.25 0.1 0.25 1" 
+        calcMode="spline" 
+      />
+      <animate 
+        attributeName="opacity" 
+        values="1;0;1" 
+        dur="0.8s" 
+        repeatCount="indefinite" 
+      />
+    </rect>
+
+    <!-- Subtitle Roles Section -->
     <text y="175" class="role-label">&gt;_ </text>
     
     <!-- Animate roles in place -->
@@ -146,10 +170,10 @@
     <text class="role-text role3">AI Enthusiast</text>
     <text class="role-text role4">Open To Work</text>
 
-    <!-- Blinking console cursor -->
-    <text x="365" y="175" class="cursor">|</text>
+    <!-- Blinking console cursor for subtitle -->
+    <text x="365" y="175" class="cursor" font-family="monospace">_</text>
   </g>
 
   <!-- 6. Bottom Border Tech Accent -->
-  <rect y="277" width="800" height="3" fill="url(#bluePurple)" />
+  <rect y="278" width="800" height="2" fill="url(#soothingGrad)" />
 </svg>
