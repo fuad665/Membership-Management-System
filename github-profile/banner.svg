@@ -28,13 +28,13 @@
       <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#ffffff" stroke-opacity="0.02" stroke-width="0.8" />
     </pattern>
 
-    <!-- Typing Mask Animation for Name "Fuad Hiyabo" (approx 280px wide) -->
+    <!-- Typing Mask Animation for Name "Fuad Hiybo Hussin" (approx 410px wide) -->
     <clipPath id="typingNameClip">
       <rect x="58" y="80" height="60" width="0">
         <animate 
           attributeName="width" 
           from="0" 
-          to="280" 
+          to="410" 
           dur="2.5s" 
           begin="0.5s" 
           fill="freeze" 
@@ -138,14 +138,14 @@
     <text x="12" y="74" font-family="'Consolas', Monaco, monospace" font-size="10" font-weight="bold" fill="#60a5fa">PROFILE.ACTIVE</text>
 
     <!-- Typing Name using Clip Path Mask -->
-    <text x="60" y="130" class="title-name" clip-path="url(#typingNameClip)">Fuad Hiyabo</text>
+    <text x="60" y="130" class="title-name" clip-path="url(#typingNameClip)">Fuad Hiybo Hussin</text>
 
     <!-- Typing Cursor (translates to the right in sync with mask width) -->
     <rect y="98" width="2" height="36" fill="#60a5fa">
       <animate 
         attributeName="x" 
         from="60" 
-        to="315" 
+        to="455" 
         dur="2.5s" 
         begin="0.5s" 
         fill="freeze" 

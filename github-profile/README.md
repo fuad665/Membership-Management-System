@@ -1,6 +1,6 @@
-# Fuad Hiyabo
+# Fuad Hiybo Hussin
 <div align="center">
-  <h3>📍 Malaysia &nbsp;|&nbsp; 📞 +60 17-935 9120 &nbsp;|&nbsp; ✉️ fuadhiyabo@gmail.com</h3>
+  <h3>📍 Malaysia &nbsp;|&nbsp; 📞 +60 17-935 9120 (Calls) &nbsp;|&nbsp; 💬 +249 63737568 (WhatsApp) &nbsp;|&nbsp; ✉️ fuadhiyabo@gmail.com</h3>
   <h4>
     🔗 <a href="https://github.com/fuad665">GitHub Profile</a> &nbsp;•&nbsp; 
     🔗 <a href="https://linkedin.com/in/fuad-hiyabo">LinkedIn</a> &nbsp;•&nbsp; 
