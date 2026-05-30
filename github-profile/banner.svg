@@ -165,13 +165,13 @@
     <text y="175" class="role-label">&gt;_ </text>
     
     <!-- Animate roles in place -->
-    <text class="role-text role1">Data Analyst</text>
-    <text class="role-text role2">Web Developer</text>
-    <text class="role-text role3">AI Enthusiast</text>
-    <text class="role-text role4">Open To Work</text>
+    <text class="role-text role1">Full-Stack Developer</text>
+    <text class="role-text role2">Frontend Specialist</text>
+    <text class="role-text role3">Backend Specialist</text>
+    <text class="role-text role4">AI &amp; Data Analyst</text>
 
     <!-- Blinking console cursor for subtitle -->
-    <text x="365" y="175" class="cursor" font-family="monospace">_</text>
+    <text x="415" y="175" class="cursor" font-family="monospace">_</text>
   </g>
 
   <!-- 6. Bottom Border Tech Accent -->
