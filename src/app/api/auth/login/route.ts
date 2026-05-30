@@ -19,6 +19,7 @@ export async function POST(request: Request) {
     });
 
     if (error) {
+      console.error("Supabase signIn error:", error);
       return NextResponse.json(
         { error: error.message },
         { status: 401 }
@@ -38,6 +39,7 @@ export async function POST(request: Request) {
       },
     });
   } catch (error: any) {
+    console.error("Internal login error:", error);
     return NextResponse.json(
       { error: "Internal Server Error" },
       { status: 500 }

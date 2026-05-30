@@ -24,6 +24,7 @@ export async function POST(request: Request) {
     });
 
     if (error) {
+      console.error("Supabase signUp error:", error);
       return NextResponse.json(
         { error: error.message },
         { status: 400 }
@@ -44,6 +45,7 @@ export async function POST(request: Request) {
       },
     });
   } catch (error: any) {
+    console.error("Internal register error:", error);
     return NextResponse.json(
       { error: "Internal Server Error" },
       { status: 500 }
